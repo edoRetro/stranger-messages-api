@@ -27,7 +27,7 @@ jobs:
           npm run build --if-present
           
       - name: Compress artifact for deployment
-        run: Compress-Archive . release.zip
+        run: Compress-Archive ./dist release.zip
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
